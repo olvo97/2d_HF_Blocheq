@@ -1,0 +1,27 @@
+#!/bin/sh
+for power in 20 30 40
+do
+for z_2 in 500320
+do
+qsub -mem 46 -args "eigen 700 1.5 ${power} 1 1 ${z_2} 0 0.15 0" single_pulse_MQW.txt
+done
+done
+
+#hinter args in den ' ' stehen dann die Eingabeparamter mit Leerzeichen getrennt. 
+#parameters (in order):
+
+#parameter_set: eigen, schuelzgen, ciuti, henry
+#Qdim
+#Qmax
+#power (for eigen in uW, for schuelzgen in uJ/cm², for ciuti and henry in multiples of pi)
+#quadratic scaling: 1 fuer quadratisches-, 0 fuer lineares q-grid
+#n_wells: anzahl quantum wells (abstände sind in parameter files festgelegt)
+#z_2: gesamte dicke GaAs Bauteil (spielt nur eine Rolle bei reflections == True)
+#reflections: 1 -> beachte alle reflexionen am Bauteil, 0 -> beachte nur initiale reflexion am Bauteil(nur bei eigen) oder keine reflexion
+#pump fluence correction factor: adapt to match experiment (schuelzgen ->9, eigen-> 0.15 passt nicht richtig)
+#conversion string 0->theory(sqrt), 1-> linear (spielt nur eine rolle bei eigen)
+
+
+#qstat 
+
+

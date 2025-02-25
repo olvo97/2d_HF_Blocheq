@@ -1,0 +1,8 @@
+#!/bin/bash
+
+qsub -mem 20 pump_probe.txt
+
+
+qstat 
+
+

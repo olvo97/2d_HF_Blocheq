@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#source /usr/local/python3/bin/activate
+
+
+python -u get_spectra.py $1 $2 $3 $4
+
+#PARAMETER 1 = Qdim
+#PARAMETER 2 = Qmax
+#PARAMETER 3 = d (well width)
+#PARAMETER 4 = d_cv (dipole moment)

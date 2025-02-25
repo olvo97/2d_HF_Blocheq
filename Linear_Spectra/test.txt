@@ -1,0 +1,8 @@
+#!/bin/bash
+
+for qdim in 30 50 70
+do
+exciton_spec.txt qdim 1.5
+eh_spec.txt qdim 1.5
+time_spec.txt qdim 1.5
+done

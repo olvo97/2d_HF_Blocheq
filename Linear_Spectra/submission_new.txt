@@ -1,0 +1,12 @@
+#!/bin/bash
+
+
+qsub -mem 12 -args '1000 1.5' exciton_spec.txt
+#qsub -mem 80 -args '1000 1.5' eh_spec.txt
+#qsub -mem 20 -args '700 1.5' time_spec.txt
+
+
+
+#hinter args in den ' ' stehen dann die Einmgabeparamter mit Leerzeichen getrennt. Für Pump_probe: delta_t n_pump
+
+

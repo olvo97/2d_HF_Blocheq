@@ -1,0 +1,23 @@
+#!/bin/bash
+for power in 150
+do
+qsub -mem 44 -args "-600 ${power} 700 1.5 1 1 0 0.15 splitting_study 0.15" pump_probe.txt
+done
+
+
+#hinter args in den ' ' stehen dann die Eingabeparamter mit Leerzeichen getrennt. Für Pump_probe: delta_t n_pump
+
+#PARAMETER 1 = DELTA_T
+#PARAMETER 2 = PUMP_FLUENCE [uJ/cm²]
+#PARAMETER 3 = Qdim
+#PARAMETER 4 = Qmax
+#PARAMETER 5 = Quadratic_grid: 0 = False, 1 = True
+#PARAMETER 6 = intraband relaxation: 0 = False, 1 = True
+#PARAMETER 7 = Power_conversion 1 = linear 0 = sqrt
+#PARAMETER 8 = Power_conversion_factor (only applied if sqrt conversion)
+
+
+
+qstat 
+
+

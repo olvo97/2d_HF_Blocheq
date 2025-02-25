@@ -1,0 +1,10 @@
+#!/bin/bash
+for d in 0.5 1 2 3 60 80 100
+do
+qsub -mem 12 -args "${d}" exciton_spec.txt
+done
+
+#hinter args in den ' ' stehen dann die Einmgabeparamter mit Leerzeichen getrennt. Für Pump_probe: delta_t n_pump
+
+
+qstat 

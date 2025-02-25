@@ -1,0 +1,30 @@
+#!/bin/bash
+for power in 0
+do
+for d_cv in 0.87
+do
+for gamma_lattice in 0.0005 
+do
+qsub -mem 44 -args "${d_cv} ${power} 700 1.5 ${gamma_lattice} 0 1 0.15 gain" pump_probe.txt
+done
+done
+done
+
+
+#hinter args in den ' ' stehen dann die Einmgabeparamter mit Leerzeichen getrennt. Für Pump_probe: delta_t n_pump
+
+#PARAMETER 1 = d_cv
+#PARAMETER 2 = PUMP_FLUENCE [uJ/cm²]
+#PARAMETER 3 = Qdim
+#PARAMETER 4 = Qmax
+#PARAMETER 5 = gamma_lattice
+#PARAMETER 6 = intraband relaxation: 0 = False, 1 = True
+#PARAMETER 7 = Power_conversion 1 = linear 0 = sqrt
+#PARAMETER 8 = Power_conversion_factor (only applied if sqrt conversion)
+#PARAMETER 9 = mode of operation (general, gain or splitting_study)
+
+
+
+qstat 
+
+

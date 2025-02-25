@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#source /usr/local/python3/bin/activate
+
+
+python -u time_evolution_spectrum.py $1 $2
+
+#PARAMETER 1 = Qdim
+#PARAMETER 2 = Qmax
+ 
