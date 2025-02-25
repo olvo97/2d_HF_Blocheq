@@ -6,3 +6,5 @@ Parameters that are not part of the argument can be adapted in the respective pa
 
 partial reflections on both sides of the GaAs structure can be included by setting reflections -> True in submission_script
 
+All utilized functions apart from the runge-kutta algorithm are given in functions.py
+
