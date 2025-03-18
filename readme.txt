@@ -1,5 +1,9 @@
-Pump-probe and single pulse optical dynamics in 2 dimensional semiconductors based on the Hartree-Fock level Bloch equations in the electron-hole picture
+Pump-probe and single pulse optoelectronic dynamics in (stacks of) 2 dimensional semiconductors based on the Hartree-Fock level Bloch equations in the electron-hole picture
 
+functions.py files contain the core functions and mathematical expressions
+main.py (pump-probe) and single_pulse_MQW.py (MQW) utilize these functions for simulations that are specified in their respective arguments and parameter.py files
+The .txt files are shell scripts that can be used to run simulations on a local Desktop or on the ITP Cluster.
+Jupyter notebooks are for plotting and analyzing the results and can mostly be ignored
 
 Linear_Spectra includes analytical expressions for the linear absorption of a single semiconductor layer, in both exciton and e-h picture
 
